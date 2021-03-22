@@ -15,6 +15,8 @@ cv.createTrackbar("R", "resim", 0, 255, nothing)
 cv.createTrackbar("G", "resim", 0, 255, nothing)
 cv.createTrackbar("B", "resim", 0, 255, nothing)
 
+cv.createTrackbar("ON/OFF", "resim", 0, 1, nothing)
+
 while(1):
     cv.imshow("resim", img)
     
@@ -25,6 +27,11 @@ while(1):
     g = cv.getTrackbarPos("G", "resim")
     b = cv.getTrackbarPos("B", "resim")
     
-    img[:] = [b, g, r]
+    switch = cv.getTrackbarPos("ON/OFF", "resim")
+    
+    if switch:
+        img[:] = [b, g, r]
+    else:
+        img[:] = 0
     
 cv.destroyAllWindows()
