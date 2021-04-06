@@ -1,7 +1,7 @@
 import cv2
 from matplotlib import pyplot as plt
 
-resim = cv2.imread("image.jpg", 0)  # read image, siyah beyaz olma sebebi 0
+resim = cv2.imread("images/image.jpg", 0)  # read image, siyah beyaz olma sebebi 0
 
 cv2.namedWindow("resim", cv2.WINDOW_NORMAL) #boyut değişebilir
 cv2.imshow("resim", resim)

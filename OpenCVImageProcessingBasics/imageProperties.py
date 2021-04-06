@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 
-img = cv.imread('image.jpg')    # reads image
+img = cv.imread('images/image.jpg')    # reads image
 
 print(img.item(100, 100, 1))   # shows a point and print bgr pixels => 0-blue, 1-green, 2-red
 img.itemset((100, 100, 1), 255)   # it changes the pixel's color
@@ -11,7 +11,7 @@ print(img.shape)   # shows img's height, width values, 3 parameter => colourful,
 # To reach pixels numbers we use "size"
 print("Colorful: " + str(img.size))     # colorful image size = gray*3
 
-img = cv.imread('image.jpg', 0)     # reads image gray
+img = cv.imread('images/image.jpg', 0)     # reads image gray
 print("Gray: " + str(img.size))     # gray image size
 
 print(img.dtype)   # Data type

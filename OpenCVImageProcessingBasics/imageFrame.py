@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 
 blue = [255, 0, 0]
 
-img = cv.imread("python.png")
+img = cv.imread("images/python.png")
 
 replicate = cv.copyMakeBorder(img, 10, 10, 10, 10, cv.BORDER_REPLICATE)
 reflect = cv.copyMakeBorder(img, 10, 10, 10, 10, cv.BORDER_REFLECT)
